@@ -1,0 +1,6 @@
+@LandMarkLinux.Server_HostAddress = http://localhost:5267
+
+GET {{LandMarkLinux.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

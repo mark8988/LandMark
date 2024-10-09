@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@vueform/slider": "^2.1.10",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue-next": "^0.24.23",
+    "click-outside-vue3": "^4.0.1",
+    "maska": "^3.0.3",
+    "vue": "^3.5.11",
+    "vue-feather": "^2.0.0",
+    "vue-i18n": "^10.0.0",
+    "vue-router": "^4.4.5",
+    "vue3-apexcharts": "^1.7.0",
+    "vuex": "^4.0.2"
+  }
+}
