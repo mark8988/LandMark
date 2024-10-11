@@ -19,7 +19,7 @@ COPY certs/landmarklinux.client.key /etc/ssl/private/key.pem
 
 
 # 暴露開發伺服器使用的端口
-EXPOSE 5173
+EXPOSE 5174
 
 # 啟動 Vue 開發伺服器
 CMD ["yarn", "dev"]
