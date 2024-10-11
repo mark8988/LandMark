@@ -3,17 +3,10 @@ import axios from 'axios';
 import routes from './routes';
 import appConfig from "../../app.config";
 import store from '@/state/store';
-
+console.log("Get in!")
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    // Use the HTML5 history API (i.e. normal-looking routes)
-    // instead of routes with hashes (e.g. example.com/#/about).
-    // This may require some server configuration in production:
-    // https://router.vuejs.org/en/essentials/history-mode.html#example-server-configurations
-    // mode: 'history',
-    // Simulate native-like scroll behavior when navigating to a new
-    // route and using back/forward buttons.
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
             return savedPosition;
@@ -26,7 +19,7 @@ const router = createRouter({
 // API based Authentication
 // Before each route evaluates...
 router.beforeEach(async (routeTo, routeFrom, next) => {
-
+    console.log("AAA")
     const authRequired = routeTo.matched.some((route) => route.meta.authRequired);
 
     if (!authRequired) return next();
@@ -43,6 +36,7 @@ router.beforeEach(async (routeTo, routeFrom, next) => {
 });
 
 router.beforeEach((routeTo, routeFrom, next) => {
+    console.log("BBB")
     if (process.env.VUE_APP_DEFAULT_AUTH === "firebase") {
 
         // Check if auth is required on this route
