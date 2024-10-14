@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LandMarkLinux.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6df6807726d92af5ee9f0e5c525031fb19113d28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04e3ec1a79a151b3f2362ec8e3ea44cce8bcfdb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("LandMarkLinux.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LandMarkLinux.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
