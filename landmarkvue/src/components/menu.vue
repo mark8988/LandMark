@@ -450,7 +450,7 @@ export default {
                 </div>
               </li>
               <li class="nav-item">
-                <BLink class="nav-link" href="#sidebarCRM" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                <BLink class="nav-link" href="#sidebarCRM" data-bs-toggle="collapse" role="button" aria-expanded="true"
                   aria-controls="sidebarCRM" data-key="t-crm">
                   {{ $t("t-crm") }}
 

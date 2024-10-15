@@ -64,6 +64,7 @@ export default {
         language: "en",
         title: "English",
       },
+          
       {
         flag: require("@/assets/images/flags/spain.svg"),
         language: "sp",
@@ -83,16 +84,16 @@ export default {
         flag: require("@/assets/images/flags/russia.svg"),
         language: "ru",
         title: "русский",
-      },
+          },
+          {
+              flag: require("@/assets/images/flags/china.svg"),
+              language: "tw",
+              title: "繁中",
+          },
       {
         flag: require("@/assets/images/flags/china.svg"),
         language: "ch",
         title: "簡中",
-       },
-       {
-         flag: require("@/assets/images/flags/china.svg"),
-         language: "tw",
-         title: "繁中",
       },
       {
         flag: require("@/assets/images/flags/french.svg"),
@@ -439,7 +440,7 @@ export default {
           <BDropdown class="dropdown" variant="ghost-secondary" dropstart no-caret
             :offset="{ alignmentAxis: 55, crossAxis: 15, mainAxis: -50 }"
             toggle-class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle material-shadow-none" menu-class="dropdown-menu-end">
-            <template #button-content> <img id="header-lang-img" src="@/assets/images/flags/us.svg" alt="Header Language"
+            <template #button-content> <img id="header-lang-img" src="@/assets/images/flags/china.svg" alt="Header Language"
                 height="20" class="rounded">
             </template>
             <BLink href="javascript:void(0);" class="dropdown-item notify-item language py-2"
