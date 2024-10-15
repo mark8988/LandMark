@@ -87,7 +87,12 @@ export default {
       {
         flag: require("@/assets/images/flags/china.svg"),
         language: "ch",
-        title: "中國人",
+        title: "簡中",
+       },
+       {
+         flag: require("@/assets/images/flags/china.svg"),
+         language: "tw",
+         title: "繁中",
       },
       {
         flag: require("@/assets/images/flags/french.svg"),
