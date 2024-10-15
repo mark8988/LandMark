@@ -1,6 +1,13 @@
 {
   "t-menu": "選單",
+  "OOOOOOOOOOOO": "==============",
   "t-main": "主要",
+  "t-organiztype": "組織類型管理",
+  "field-organiztype": "組織類型",
+  "field-organizlevel": "組織階層",
+  "field-edit": "編輯",
+  "field-delete": "刪除",
+  "OOOOOOOOOOO": "===============",
   "t-dashboards": "儀表板",
   "t-analytics": "分析",
   "t-crm": "客戶關係管理",

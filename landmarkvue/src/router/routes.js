@@ -64,7 +64,16 @@ export default [
       authRequired: true,
     },
     component: () => import("../views/dashboard/ecommerce/index.vue"),
-  },
+    },
+    {
+        path: "/main/organiztype",
+        name: "main-organiztype",
+        meta: {
+            title: "organiztype", authRequired: true,
+        },
+        component: () => import("../views/main/organiztype"),
+    },
+  //ฝdจา
   {
     path: "/dashboard/crypto",
     name: "dashboard-crypto",
