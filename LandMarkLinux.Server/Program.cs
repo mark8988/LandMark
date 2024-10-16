@@ -1,4 +1,14 @@
+using LandMark.EF;
+using LandMark.Middleware;
+using LandMark.Middleware.services;
+using LandMarkLinux.Server.Helpers;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var globalSettings = builder.Configuration.GetSection("GlobalSettings").Get<GlobalSettings>();
+builder.Services.AddSingleton(globalSettings);
+builder.Services.AddHttpContextAccessor();
 
 // Add services to the container.
 
@@ -6,6 +16,18 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddDbContext<LandMarkContext>(options =>
+options.UseSqlServer("Server=59.125.142.83;Database=LandMark;User Id=sa;Password=au/6fu0 gj4jo4dk ru4;TrustServerCertificate=true;"), ServiceLifetime.Transient);
+
+//公司組織管理
+builder.Services.AddScoped<SAdminManage, SAdminManage>();
+
+
+
+// Helper
+builder.Services.AddScoped<JwtHelper, JwtHelper>();
 
 var app = builder.Build();
 

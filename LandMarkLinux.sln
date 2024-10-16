@@ -9,6 +9,10 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "landmarklinux.client", "lan
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "landmarkvue", "LandMarkVue\landmarkvue.esproj", "{E8B875C1-B4CA-44C0-8416-361EA2608F79}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LandMark.EF", "LandMark.EF\LandMark.EF.csproj", "{EFC1B648-B275-42B4-81F7-D39E06DDEEB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LandMark.MiddleWare", "LandMark.MiddleWare\LandMark.MiddleWare.csproj", "{8387EC99-C991-4BE0-950E-70179A925BC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{E8B875C1-B4CA-44C0-8416-361EA2608F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8B875C1-B4CA-44C0-8416-361EA2608F79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E8B875C1-B4CA-44C0-8416-361EA2608F79}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EFC1B648-B275-42B4-81F7-D39E06DDEEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC1B648-B275-42B4-81F7-D39E06DDEEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC1B648-B275-42B4-81F7-D39E06DDEEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC1B648-B275-42B4-81F7-D39E06DDEEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8387EC99-C991-4BE0-950E-70179A925BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8387EC99-C991-4BE0-950E-70179A925BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8387EC99-C991-4BE0-950E-70179A925BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8387EC99-C991-4BE0-950E-70179A925BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
