@@ -1,3 +1,5 @@
 .vs/
 /landmarkvue/node_modules
 /LandMarkLinux.Server/obj/Debug
+/LandMarkLinux.Server/obj
+/LandMarkLinux.Server/bin
