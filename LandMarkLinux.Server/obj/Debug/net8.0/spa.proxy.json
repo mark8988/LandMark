@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "D:\\Work\\LandMarkLinux\\LandMarkLinux.Server\\..\\landmarklinux.client",
+"WorkingDirectory": "D:\\Work\\LandMark\\LandMark\\LandMarkLinux.Server\\..\\landmarklinux.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

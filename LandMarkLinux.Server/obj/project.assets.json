@@ -553,11 +553,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\LandMarkLinux\\LandMarkLinux.Server\\LandMarkLinux.Server.csproj",
+      "projectUniqueName": "D:\\Work\\LandMark\\LandMark\\LandMarkLinux.Server\\LandMarkLinux.Server.csproj",
       "projectName": "LandMarkLinux.Server",
-      "projectPath": "D:\\Work\\LandMarkLinux\\LandMarkLinux.Server\\LandMarkLinux.Server.csproj",
+      "projectPath": "D:\\Work\\LandMark\\LandMark\\LandMarkLinux.Server\\LandMarkLinux.Server.csproj",
       "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\LandMarkLinux\\LandMarkLinux.Server\\obj\\",
+      "outputPath": "D:\\Work\\LandMark\\LandMark\\LandMarkLinux.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config",

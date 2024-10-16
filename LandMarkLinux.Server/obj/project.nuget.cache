@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "afc7JDxs8uEcXcEIuqP/h2R+R69P8TBSgUSrqngjCAN6vK+OZ9zfy8kBPRVSIzgpeTkFTsnE6NrVc+sUvI4j9w==",
+  "dgSpecHash": "QjblP5GpQkvnnr9MLEOZmD0c3ybnwdjAHJQOI9SqkqtyzqrSbc36PMy6L+QLO2y99wLVN6YxlWW53O4Y68YM1Q==",
   "success": true,
-  "projectFilePath": "D:\\Work\\LandMarkLinux\\LandMarkLinux.Server\\LandMarkLinux.Server.csproj",
+  "projectFilePath": "D:\\Work\\LandMark\\LandMark\\LandMarkLinux.Server\\LandMarkLinux.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benso\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.10\\microsoft.aspnetcore.spaproxy.8.0.10.nupkg.sha512",
     "C:\\Users\\benso\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

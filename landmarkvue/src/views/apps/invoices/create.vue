@@ -554,61 +554,63 @@ export default {
                     </tr>
 
                   </tbody>
-                  <tr id="newForm" style="display: none"></tr>
-                  <tr>
-                    <td colspan="9">
-                      <BLink @click="new_link" class="btn btn-soft-secondary fw-medium"><i
-                          class="ri-add-fill me-1 align-bottom"></i> Add
-                        Item</BLink>
-                    </td>
-                  </tr>
-                  <tr class="border-top border-top-dashed mt-2">
-                    <td colspan="3"></td>
-                    <td colspan="2" class="p-0">
-                      <table class="table table-borderless table-sm table-nowrap align-middle mb-0">
-                        <tbody>
-                          <tr>
-                            <th scope="row">Sub Total</th>
-                            <td style="width: 150px">
-                              <input type="text" class="form-control bg-light border-0" id="cart-subtotal"
-                                placeholder="$0.00" readonly />
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Estimated Tax (12.5%)</th>
-                            <td>
-                              <input type="text" class="form-control bg-light border-0" id="cart-tax"
-                                placeholder="$0.00" readonly />
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                              Discount
-                              <small class="text-muted">(VELZON15)</small>
-                            </th>
-                            <td>
-                              <input type="text" class="form-control bg-light border-0" id="cart-discount"
-                                placeholder="$0.00" readonly />
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Shipping Charge</th>
-                            <td>
-                              <input type="text" class="form-control bg-light border-0" id="cart-shipping"
-                                placeholder="$0.00" readonly />
-                            </td>
-                          </tr>
-                          <tr class="border-top border-top-dashed">
-                            <th scope="row">Total Amount</th>
-                            <td>
-                              <input type="text" class="form-control bg-light border-0" id="cart-total"
-                                placeholder="$0.00" readonly />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
+                  <tbody>
+                      <tr id="newForm" style="display: none"></tr>
+                      <tr>
+                        <td colspan="9">
+                          <BLink @click="new_link" class="btn btn-soft-secondary fw-medium"><i
+                              class="ri-add-fill me-1 align-bottom"></i> Add
+                            Item</BLink>
+                        </td>
+                      </tr>
+                      <tr class="border-top border-top-dashed mt-2">
+                        <td colspan="3"></td>
+                        <td colspan="2" class="p-0">
+                          <table class="table table-borderless table-sm table-nowrap align-middle mb-0">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Sub Total</th>
+                                <td style="width: 150px">
+                                  <input type="text" class="form-control bg-light border-0" id="cart-subtotal"
+                                    placeholder="$0.00" readonly />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Estimated Tax (12.5%)</th>
+                                <td>
+                                  <input type="text" class="form-control bg-light border-0" id="cart-tax"
+                                    placeholder="$0.00" readonly />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">
+                                  Discount
+                                  <small class="text-muted">(VELZON15)</small>
+                                </th>
+                                <td>
+                                  <input type="text" class="form-control bg-light border-0" id="cart-discount"
+                                    placeholder="$0.00" readonly />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Shipping Charge</th>
+                                <td>
+                                  <input type="text" class="form-control bg-light border-0" id="cart-shipping"
+                                    placeholder="$0.00" readonly />
+                                </td>
+                              </tr>
+                              <tr class="border-top border-top-dashed">
+                                <th scope="row">Total Amount</th>
+                                <td>
+                                  <input type="text" class="form-control bg-light border-0" id="cart-total"
+                                    placeholder="$0.00" readonly />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                  </tbody>
                 </table>
               </div>
               <BRow class="mt-3">
