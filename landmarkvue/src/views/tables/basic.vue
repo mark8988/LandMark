@@ -812,7 +812,7 @@ export default {
                                                 <tr>
                                                     <td class="fw-medium">01</td>
                                                     <td>Basic Plan</td>
-                                                    <td>$860</td>
+                                                    <td>$8602</td>
                                                     <td>Nov 22, 2021</td>
                                                     <td><i class="ri-checkbox-circle-line align-middle text-success"></i>
                                                         Subscribed</td>

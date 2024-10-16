@@ -1,6 +1,6 @@
 <script>
 import NavBar from "@/components/nav-bar";
-import RightBar from "@/components/right-bar";
+//import RightBar from "@/components/right-bar";
 import Footer from "@/components/footer";
 
 export default {
@@ -124,7 +124,7 @@ export default {
   },
   components: {
     NavBar,
-    RightBar,
+    //RightBar,
     Footer
   },
 };
@@ -1499,7 +1499,7 @@ export default {
         </div>
         <Footer />
       </div>
-      <RightBar />
+      <!--<RightBar />-->
     </div>
   </div>
 </template>

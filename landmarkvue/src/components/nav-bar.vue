@@ -451,7 +451,7 @@ export default {
             </BLink>
           </BDropdown>
 
-          <BDropdown class="dropdown" variant="ghost-secondary" dropstart no-caret
+          <BDropdown class="dropdown" variant="ghost-secondary" dropstart no-caret v-if="false"
             :offset="{ alignmentAxis: 57, crossAxis: 0, mainAxis: -42 }"
             toggle-class="btn-icon btn-topbar rounded-circle mode-layout ms-1 material-shadow-none" menu-class="p-0 dropdown-menu-end">
             <template #button-content>
@@ -516,7 +516,7 @@ export default {
             </div>
           </BDropdown>
 
-          <BDropdown variant="ghost-secondary" dropstart :offset="{ alignmentAxis: 57, crossAxis: 0, mainAxis: -42 }"
+          <BDropdown v-if="false" variant="ghost-secondary" dropstart :offset="{ alignmentAxis: 57, crossAxis: 0, mainAxis: -42 }"
             no-caret class="ms-1 dropdown" toggle-class="btn-icon btn-topbar rounded-circle mode-layout material-shadow-none"
             menu-class="dropdown-menu-xl dropdown-menu-end p-0" text="Manual close (auto-close=false)"
             auto-close="outside">
@@ -604,7 +604,7 @@ export default {
             </BButton>
           </div>
 
-          <BDropdown variant="ghost-dark" dropstart class="ms-1 dropdown" no-caret
+          <BDropdown variant="ghost-dark" dropstart class="ms-1 dropdown" no-caret v-if="false"
             :offset="{ alignmentAxis: 57, crossAxis: 0, mainAxis: -42 }" toggle-class="btn-icon btn-topbar rounded-circle material-shadow-none"
             id="page-header-notifications-dropdown" menu-class="dropdown-menu-lg dropdown-menu-end p-0"
             auto-close="outside">

@@ -1,4 +1,4 @@
-<script>
+﻿<script>
 import {
   layoutComputed
 } from "@/state/helpers";
@@ -236,7 +236,12 @@ export default {
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
                             <router-link to="/main/organiztype" class="nav-link custom-abc" data-key="t-organiztype">
-                                {{ $t("t-organiztype") }}
+                                {{ "組織類型管理" }}
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/main/organizmanage" class="nav-link custom-abc" data-key="t-organizmanage">
+                                {{ "組織管理" }}
                             </router-link>
                         </li>
                     </ul>

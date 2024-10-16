@@ -73,6 +73,14 @@ export default [
         },
         component: () => import("../views/main/organiztype"),
     },
+    {
+        path: "/main/organizmanage",
+        name: "main-organizmanage",
+        meta: {
+            title: "organizmanage", authRequired: true,
+        },
+        component: () => import("../views/main/organizmanage"),
+    },
   //ฝdจา
   {
     path: "/dashboard/crypto",

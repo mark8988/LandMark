@@ -1012,7 +1012,7 @@ export default {
         </div>
       </BCol>
 
-      <div class="col-auto layout-rightside-col d-block">
+      <div class="col-auto layout-rightside-col d-block" v-if="false">
         <div class="overlay" @click="hiderightcolumn"></div>
         <div class="layout-rightside">
           <BCard no-body class="h-100 rounded-0">
