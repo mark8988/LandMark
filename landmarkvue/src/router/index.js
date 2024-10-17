@@ -28,18 +28,35 @@ const router = createRouter({
 router.beforeEach(async (routeTo, routeFrom, next) => {
 
   const authRequired = routeTo.matched.some((route) => route.meta.authRequired);
-  
   if (!authRequired) return next();
+
+    const token = localStorage.getItem('jwt');
+    if (!token) {
+        // 如果沒有 token，重定向到登錄頁面
+        return next({ name: 'login', query: { redirectFrom: routeTo.fullPath } });
+    }
+    axios.defaults.headers.common['authorization'] = 'Bearer ' + token;
   
-  axios.defaults.headers.common['authorization'] = 'Bearer ' + localStorage.getItem('jwt'); // for all requests
-  await axios.get('https://api-node.themesbrand.website/profile').then((data) => {
-    localStorage.setItem('userdata', JSON.stringify(data.data.user));
-    localStorage.setItem('userid', data.data.user._id);
-    localStorage.setItem('user', JSON.stringify(data.data.user));
-    next();
-  }).catch(() => {
-    next({ name: 'login', query: { redirectFrom: routeTo.fullPath } });
-  });
+    try {
+        // 呼叫 ValidateToken API
+        const response = await axios.post('https://localhost:44356/Admin/validate', null, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
+
+        // 檢查 API 回應
+        if (response.status === 200) {
+            localStorage.setItem('userdata', JSON.stringify(response.data.user));
+            localStorage.setItem('userid', response.data.userId); // 這個是從 ValidateToken 返回的 userId
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+            next(); // 通過驗證，繼續到目標路由
+        }
+    } catch (error) {
+        console.error("Token validation failed:", error.response?.data.message);
+        // 如果驗證失敗，重定向到登錄頁面
+        next({ name: 'login', query: { redirectFrom: routeTo.fullPath } });
+    }
 });
 
 router.beforeEach((routeTo, routeFrom, next) => {

@@ -29,5 +29,17 @@ namespace LandMarkLinux.Server.Controllers
             })
             .ToArray();
         }
+        [HttpGet("GetSpecificWeather/{day}", Name = "GetSpecificWeather")]
+        public WeatherForecast GetSpecificWeather(int day)
+        {
+            var weather = new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(day)),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            };
+            return weather;
+        }
+
     }
 }

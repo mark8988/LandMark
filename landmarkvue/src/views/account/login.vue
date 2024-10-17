@@ -42,20 +42,47 @@ export default {
     ...authFackMethods,
     ...notificationMethods,
 
-    async signinapi() {
-      this.processing = true;
-      const result = await axios.post('https://api-node.themesbrand.website/auth/signin', {
-        email: this.email,
-        password: this.password
-      });
-      if (result.data.status == 'errors') {
-        return this.authError = result.data.data;
-      }
-      localStorage.setItem('jwt', result.data.token);
-      this.$router.push({
-        path: '/'
-      });
-    },
+      async signinapi() {
+          this.processing = true; // 顯示加載狀態
+          this.authError = ''; // 清除先前的錯誤消息
+
+          try {
+              const result = await axios.post('https://localhost:44356/Admin/Login', {
+                  account: this.email, // 根據 API 的要求，確認這裡的字段名稱
+                  password: this.password
+              });
+              console.log("result: ", result)
+              console.log("result: ", result.data)
+              // 檢查返回的結果，根據你的 API 結構進行調整
+              if (result.status === 200) {
+                  // 登錄成功，儲存 token
+                  localStorage.setItem('jwt', result.data); // 根據 API 的回應結構提取 token
+                  console.log("go go")
+                  this.$router.push({ path: '/' })
+                      .then(() => {
+                          console.log("Navigation successful");
+                      })
+                      .catch(err => {
+                          console.error("Navigation failed:", err);
+                      });
+              } else {
+                  // 根據需求處理其他狀態
+                  this.authError = '登錄失敗，請重試。'; // 默認錯誤消息
+              }
+          } catch (error) {
+              // 錯誤處理
+              if (error.response) {
+                  // 伺服器響應的錯誤
+                  this.authError = error.response.data.result_message || '登錄失敗'; // 使用 API 返回的錯誤信息
+              } else {
+                  // 網絡錯誤或其他錯誤
+                  this.authError = '登錄失敗，請檢查網絡連接';
+              }
+          } finally {
+              this.processing = false; // 隱藏加載狀態
+          }
+      },
+
 
     // Try to log the user in with the username
     // and password they provided.

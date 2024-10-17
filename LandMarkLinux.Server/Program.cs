@@ -10,6 +10,14 @@ var globalSettings = builder.Configuration.GetSection("GlobalSettings").Get<Glob
 builder.Services.AddSingleton(globalSettings);
 builder.Services.AddHttpContextAccessor();
 
+// 新增 CORS 服務
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:8080") // 允許的來源
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -42,6 +50,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 
