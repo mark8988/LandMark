@@ -76,7 +76,7 @@ namespace LandMarkLinux.Server.Controllers
             }
         }
 
-        [HttpPost("validate"), Authorize(Roles = "admin")]
+        [HttpPost("validate"), Authorize]
         public IActionResult ValidateToken()
         {
             // 獲取當前用戶的 JWT，這裡使用 HttpContext
@@ -95,7 +95,7 @@ namespace LandMarkLinux.Server.Controllers
                 // 檢查 token 是否有效
                 if (jwtToken != null && jwtToken.ValidTo > DateTime.UtcNow)
                 {
-                    var userId = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.NameIdentifier).Value;
+                    var userId = jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Name).Value;
 
                     // 可以返回用戶資訊或其他相關資料
                     return Ok(new
