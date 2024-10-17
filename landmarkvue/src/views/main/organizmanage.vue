@@ -222,6 +222,7 @@
                         //  }).catch((er) => {
                         //    console.log(er);
                         //  });
+                        this.setPages();
                     }
                 } else {
                     this.submitted = true;
@@ -289,7 +290,11 @@
                 }
             },
             //
-
+            UpdatePerPage() {
+                this.page = 1;
+                this.SearchData();
+                this.setPages();
+            },
             SearchData() {
                 this.filterdate = this.filterdate1;
                 this.filtervalue = this.filtervalue1;
@@ -448,16 +453,22 @@
                         </b-form>
                     </BCardBody>
                     <BCardBody>
-                        <div class="table-responsive table-card mb-4">
+                        <div class="table-responsive table-card mb-4 mt-1">
+                            <div class="mb-3 d-flex align-items-center ms-3">
+                                <label for="entriesPerPage" class="me-2 mb-0">每頁顯示：</label>
+                                <select id="entriesPerPage" v-model="perPage" class="form-select" style="width: 100px;" @change="UpdatePerPage">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="5">5</option>
+                                    <option value="8">8</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
                             <table class="table align-middle table-nowrap mb-0" id="tasksTable">
                                 <thead class="table-light text-muted">
                                     <tr>
-                                        <!--<th scope="col" style="width: 40px">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="checkAll" value="option" />
-      </div>
-    </th>-->
-                                        <!--<th class="sort" data-sort="id" @click="onSort('taskId')">ID</th>-->
                                         <th class="sort" data-sort="type_name" @click="onSort('project')">類型</th>
                                         <th class="sort" data-sort="level_name" @click="onSort('project')">層級</th>
                                         <th class="sort" data-sort="orgname_name" @click="onSort('project')">組織名稱</th>
@@ -470,15 +481,6 @@
                                 </thead>
                                 <tbody class="list form-check-all">
                                     <tr v-for="(task, index) of resultQuery" :key="index">
-                                        <!--<th scope="row">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="chk_child" value="option1" />
-      </div>
-    </th>-->
-                                        <!--<td class="id">
-      <router-link to="/apps/tasks-details" class="fw-medium link-primary">{{ task.taskId }}
-      </router-link>
-    </td>-->
                                         <td class="type_name">
                                             <router-link to="/apps/projects-overview" class="fw-medium link-primary">
                                                 {{ task.type }}
@@ -491,6 +493,7 @@
                                         </td>
                                         <td class="orgname_name">
                                             <router-link to="/apps/projects-overview" class="fw-medium link-primary">
+
                                                 {{ task.orgname }}
                                             </router-link>
                                         </td>
@@ -538,9 +541,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="mb-0 ms-3">
+                                顯示第 {{ (page - 1) * perPage + 1 }} 到第 {{ Math.min(page * perPage, allTask.length) }} 筆資料，共 {{ allTask.length }} 筆
+                            </h6>
 
-                        <div class="d-flex justify-content-end" v-if="resultQuery.length >= 1">
-                            <div class="pagination-wrap hstack gap-2">
+                            <div class="pagination-wrap hstack gap-2 me-3" v-if="resultQuery.length >= 1">
                                 <BLink class="page-item pagination-prev" href="#" :disabled="page <= 1" @click="page--">
                                     上一頁
                                 </BLink>
