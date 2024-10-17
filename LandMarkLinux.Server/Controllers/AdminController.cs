@@ -77,7 +77,6 @@ namespace LandMarkLinux.Server.Controllers
         }
 
         [HttpPost("validate"), Authorize(Roles = "admin")]
-        [Authorize] 
         public IActionResult ValidateToken()
         {
             // 獲取當前用戶的 JWT，這裡使用 HttpContext
