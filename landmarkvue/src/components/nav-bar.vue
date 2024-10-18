@@ -888,16 +888,16 @@ export default {
                 </span>
               </span>
             </template>
-            <h6 class="dropdown-header">Welcome Anna!</h6>
-            <router-link class="dropdown-item" to="/pages/profile"><i
+            <h6 class="dropdown-header">Welcome</h6>
+            <router-link class="dropdown-item" to="/pages/profile" v-if="false"><i
                 class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>
               <span class="align-middle"> Profile</span>
             </router-link>
-            <router-link class="dropdown-item" to="/chat">
+            <router-link class="dropdown-item" to="/chat" v-if="false">
               <i class=" mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>
               <span class="align-middle"> Messages</span>
             </router-link>
-            <router-link class="dropdown-item" to="/apps/tasks-kanban">
+            <router-link class="dropdown-item" to="/apps/tasks-kanban" v-if="false">
               <i class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i>
               <span class="align-middle"> Taskboard</span>
             </router-link>
@@ -906,22 +906,22 @@ export default {
               <span class="align-middle"> Help</span>
             </router-link>
             <div class="dropdown-divider"></div>
-            <router-link class="dropdown-item" to="/pages/profile"><i
+            <router-link class="dropdown-item" to="/pages/profile" v-if="false"><i
                 class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i>
               <span class="align-middle"> Balance : <b>$5971.67</b></span>
             </router-link>
-            <router-link class="dropdown-item" to="/pages/profile-setting">
+            <router-link class="dropdown-item" to="/pages/profile-setting" v-if="false">
               <BBadge variant="success-subtle" class="bg-success-subtle text-success mt-1 float-end">New</BBadge><i
                 class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i>
               <span class="align-middle"> Settings</span>
             </router-link>
-            <router-link class="dropdown-item" to="/auth/lockscreen-basic"><i
+            <router-link class="dropdown-item" to="/auth/lockscreen-basic" v-if="false"><i
                 class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i>
               <span class="align-middle"> Lock screen</span>
             </router-link>
             <router-link class="dropdown-item" to="/logout"><i
                 class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
-              <span class="align-middle" data-key="t-logout"> Logout</span>
+              <span class="align-middle" data-key="t-logout"> 登出</span>
             </router-link>
           </BDropdown>
         </div>

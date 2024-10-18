@@ -1,7 +1,16 @@
 import { userService } from '../../helpers/authservice/user.service';
 import router from '../../router/index'
 
-const user = JSON.parse(localStorage.getItem('user'));
+//const user = JSON.parse(localStorage.getItem('user'));
+let user = null;
+
+try {
+    user = JSON.parse(localStorage.getItem('user'));
+} catch (error) {
+    console.error("Error parsing 'user' from localStorage:", error);
+    // router.push('/login');
+}
+
 export const state = user
     ? { status: { loggeduser: true }, user }
     : { status: {}, user: null };

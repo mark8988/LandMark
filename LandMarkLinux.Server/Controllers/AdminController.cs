@@ -55,6 +55,7 @@ namespace LandMarkLinux.Server.Controllers
                 var result = _jwtHelpers.GenerateToken(request.account);
                 if (admin != null)
                 {
+                    var menus = GetVisibleMenusForUser();
                     return Ok(result.Value);
                 }
                 else
@@ -102,7 +103,8 @@ namespace LandMarkLinux.Server.Controllers
                     {
                         status = "success",
                         userId = userId,
-                        message = "Token is valid"
+                        message = "Token is valid",
+                        menuVisibility = "ddddd"
                     });
                 }
                 else
@@ -115,5 +117,13 @@ namespace LandMarkLinux.Server.Controllers
                 return Unauthorized(new { message = "Token is invalid", error = ex.Message });
             }
         }
+
+
+        #region 私有方法
+        private List<string> GetVisibleMenusForUser(string admin = "")
+        {
+            return new List<string> { "Dashboard", "Settings", "User Management" };
+        }
+        #endregion
     }
 }

@@ -12,4 +12,9 @@ namespace LandMark.Middleware.ViewModels.Admin_Info
         public string account { get; set; }
         public string password { get; set; }
     }
+    public class LoginResponse
+    {
+        public string Token { get; set; }
+        public List<string> Menus { get; set; }
+    }
 }

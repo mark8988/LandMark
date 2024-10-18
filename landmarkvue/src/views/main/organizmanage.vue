@@ -140,7 +140,8 @@
         },
         beforeMount() {
             axios.get('https://api-node.themesbrand.website/apps/task').then((data) => {
-                this.allTask = [];
+                console.log("NOCALL")
+                //this.allTask = [];
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
                     "Oct", "Nov", "Dec"
                 ];
@@ -155,55 +156,55 @@
 
                     // row.image_src = `@/assets/images/products/img-8.png`;
                     // row.image_src = 'https://api-node.themesbrand.website/fileupload/users_bucket/' + row.img;
-                    this.allTask = [
-                        {
-                            "_id": "6260f5baae650a7cd1595918",
-                            "type": "公司",
-                            "level": "-",
-                            "orgname": "地標網通",
-                            "orgid": "KD45986",
-                            "taxid": "24670818",
-                            "addr": "高雄市新興區忠孝一路號300號1F",
-                            "tel": "075887839",
-                        },
-                        {
-                            "_id": "6260f5baae650a7cd1fqwq918",
-                            "type": "品牌",
-                            "level": "地標網通",
-                            "orgname": "黑媽媽通訊",
-                            "orgid": "KD45986",
-                            "taxid": "24670818",
-                            "addr": "高雄市新興區忠孝一路號300號1F",
-                            "tel": "075887839",
-                        },
-                        {
-                            "_id": "6260f5baae650a7cqwt95918",
-                            "type": "門市",
-                            "level": "地標網通-黑媽媽通訊",
-                            "orgname": "天母門市",
-                            "orgid": "KD45986",
-                            "taxid": "24670818",
-                            "addr": "高雄市新興區忠孝一路號300號1F",
-                            "tel": "075887839",
-                        },
-                        {
-                            "_id": "6260f5baae650a7cdqqt235918",
-                            "type": "門市",
-                            "level": "地標網通-亮晶晶家電",
-                            "orgname": "公館門市",
-                            "orgid": "KD45986",
-                            "taxid": "24670818",
-                            "addr": "高雄市新興區忠孝一路號300號1F",
-                            "tel": "075887839",
-                        }
-                    ];
+                    
 
                     //this.allTask.push(row);
                 });
             }).catch((er) => {
                 console.log(er);
             });
-
+            this.allTask = [
+                {
+                    "_id": "6260f5baae650a7cd1595918",
+                    "type": "公司",
+                    "level": "-",
+                    "orgname": "地標網通",
+                    "orgid": "KD45986",
+                    "taxid": "24670818",
+                    "addr": "高雄市新興區忠孝一路號300號1F",
+                    "tel": "075887839",
+                },
+                {
+                    "_id": "6260f5baae650a7cd1fqwq918",
+                    "type": "品牌",
+                    "level": "地標網通",
+                    "orgname": "黑媽媽通訊",
+                    "orgid": "KD45986",
+                    "taxid": "24670818",
+                    "addr": "高雄市新興區忠孝一路號300號1F",
+                    "tel": "075887839",
+                },
+                {
+                    "_id": "6260f5baae650a7cqwt95918",
+                    "type": "門市",
+                    "level": "地標網通-黑媽媽通訊",
+                    "orgname": "天母門市",
+                    "orgid": "KD45986",
+                    "taxid": "24670818",
+                    "addr": "高雄市新興區忠孝一路號300號1F",
+                    "tel": "075887839",
+                },
+                {
+                    "_id": "6260f5baae650a7cdqqt235918",
+                    "type": "門市",
+                    "level": "地標網通-亮晶晶家電",
+                    "orgname": "公館門市",
+                    "orgid": "KD45986",
+                    "taxid": "24670818",
+                    "addr": "高雄市新興區忠孝一路號300號1F",
+                    "tel": "075887839",
+                }
+            ];
         },
 
         methods: {
@@ -247,10 +248,12 @@
             onSort(column) {
                 this.direction = this.direction === 'asc' ? 'desc' : 'asc';
                 const sortedArray = [...this.allTask];
+                console.log("1 onSort sortedArray: ", sortedArray)
                 sortedArray.sort((a, b) => {
                     const res = a[column] < b[column] ? -1 : a[column] > b[column] ? 1 : 0;
                     return this.direction === 'asc' ? res : -res;
                 });
+                console.log("2 onSort sortedArray: ", sortedArray)
                 this.allTask = sortedArray;
             },
 

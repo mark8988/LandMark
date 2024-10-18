@@ -16,7 +16,7 @@ import {
 export default {
   data() {
     return {
-      email: "admin@themesbrand.com",
+      email: "admin",
       password: "123456",
       submitted: false,
       authError: null,
@@ -51,13 +51,12 @@ export default {
                   account: this.email, // 根據 API 的要求，確認這裡的字段名稱
                   password: this.password
               });
-              console.log("result: ", result)
-              console.log("result: ", result.data)
               // 檢查返回的結果，根據你的 API 結構進行調整
               if (result.status === 200) {
                   // 登錄成功，儲存 token
+                  console.log("go go result: ", result)
                   localStorage.setItem('jwt', result.data); // 根據 API 的回應結構提取 token
-                  console.log("go go")
+                  console.log("go go localStorage: ", localStorage)
                   this.$router.push({ path: '/' })
                       .then(() => {
                           console.log("Navigation successful");

@@ -1,4 +1,4 @@
-<script>
+﻿<script>
 import { authMethods } from "@/state/helpers";
 
 import { required, email, helpers } from "@vuelidate/validators";
@@ -84,12 +84,13 @@ export default {
           <BCol lg="12">
             <div class="text-center mt-sm-5 mb-4 text-white-50">
               <div>
-                <router-link to="/" class="d-inline-block auth-logo">
-                  <img src="@/assets/images/logo-light.png" alt="" height="20" />
-                </router-link>
+                  <router-link to="/" class="d-inline-block auth-logo">
+                      <!--<img src="@/assets/images/logo-light.png" alt="" height="20" />-->
+                      <img src="https://www.svgrepo.com/show/420106/device-electronic-machine-9.svg" alt="Device Electronic Machine" height="50">
+                  </router-link>
               </div>
               <p class="mt-3 fs-15 fw-medium">
-                Premium Admin & Dashboard Template
+                  LandMark
               </p>
             </div>
           </BCol>
@@ -100,8 +101,8 @@ export default {
             <BCard no-body class="mt-4">
               <BCardBody class="p-4">
                 <div class="text-center mt-2">
-                  <h5 class="text-primary">Forgot Password?</h5>
-                  <p class="text-muted">Reset password with velzon</p>
+                  <h5 class="text-primary">忘記密碼?</h5>
+                  <p class="text-muted">重設密碼</p>
 
                   <lottie class="avatar-xl" colors="primary:#0ab39c,secondary:#405189" :options="defaultOptions"
                     :height="120" :width="120" />
@@ -111,20 +112,25 @@ export default {
                 <div class="p-2">
                   <BAlert v-model="isResetError" class="mb-4" variant="danger" dismissible>{{ error }}</BAlert>
                   <form @submit.prevent="tryToReset">
-                    <div class="mb-4">
-                      <label class="form-label">Email</label>
-                      <input type="email" v-model="email" class="form-control" id="email"
-                        :class="{ 'is-invalid': submitted && v$.email.$errors }" placeholder="Enter Email" />
-                      <div v-for="(item, index) in v$.email.$errors" :key="index" class="invalid-feedback">
-                        <span v-if="item.$message">{{ item.$message }}</span>
+                      <div class="mb-4">
+                          <label class="form-label">Email</label>
+                          <input type="email" v-model="email" class="form-control" id="email"
+                                 :class="{ 'is-invalid': submitted && v$.email.$errors }" placeholder="輸入 Email" />
+                          <div v-for="(item, index) in v$.email.$errors" :key="index" class="invalid-feedback">
+                              <span v-if="item.$message">{{ item.$message }}</span>
+                          </div>
                       </div>
-                    </div>
 
-                    <div class="text-center mt-4">
-                      <BButton variant="success" class="w-100" type="submit">
-                        Send Reset Link
-                      </BButton>
-                    </div>
+                      <div class="text-center mt-4">
+                          <BButton variant="success" class="w-100" type="submit">
+                              寄出重設連結
+                          </BButton>
+                      </div>
+                      <div class="mt-4">
+                          <router-link to="/auth/signin-basic" class="btn btn-info w-100">
+                              返回登入
+                          </router-link>
+                      </div>
                   </form>
                 </div>
               </BCardBody>

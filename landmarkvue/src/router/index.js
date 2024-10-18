@@ -44,7 +44,6 @@ router.beforeEach(async (routeTo, routeFrom, next) => {
                 'Authorization': 'Bearer ' + token
             }
         })
-
         // ¿À¨d API ¶^¿≥
         if (response.status === 200) {
             localStorage.setItem('userdata', JSON.stringify(response.data.user));

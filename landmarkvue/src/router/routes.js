@@ -1,4 +1,4 @@
-import store from "@/state/store";
+﻿import store from "@/state/store";
 
 export default [
   {
@@ -60,16 +60,16 @@ export default [
     path: "/",
     name: "default",
     meta: {
-      title: "Dashboard",
+        title: "組織管理",
       authRequired: true,
     },
-    component: () => import("../views/dashboard/ecommerce/index.vue"),
+      component: () => import("../views/main/organizmanage.vue"),
     },
     {
         path: "/main/organiztype",
         name: "main-organiztype",
         meta: {
-            title: "organiztype", authRequired: true,
+            title: "組織類別", authRequired: true,
         },
         component: () => import("../views/main/organiztype"),
     },
@@ -77,11 +77,11 @@ export default [
         path: "/main/organizmanage",
         name: "main-organizmanage",
         meta: {
-            title: "organizmanage", authRequired: true,
+            title: "組織管理", authRequired: true,
         },
         component: () => import("../views/main/organizmanage"),
     },
-  //�d��
+  //範例
   {
     path: "/dashboard/crypto",
     name: "dashboard-crypto",
@@ -90,7 +90,15 @@ export default [
       authRequired: true,
     },
     component: () => import("../views/dashboard/crypto/index"),
-  },
+    },
+    {
+        path: "/dashboard/ecommerce",
+        name: "dashboard-ecommerce",
+        meta: {
+            title: "Ecommerce", authRequired: true,
+        },
+        component: () => import("../views/dashboard/ecommerce/index"),
+    },
   {
     path: "/dashboard/projects",
     name: "dashboard-projects",
